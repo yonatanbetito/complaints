@@ -1,10 +1,13 @@
-import {createComplaint,getAllComplaints,} from "../modles/complaint.model.js";
+import {
+  createComplaint,
+  getAllComplaints,
+} from "../modles/complaint.model.js";
 
 export async function submitComplaint(req, res) {
   try {
     const { category, message } = req.body;
     await createComplaint({ category, message });
-    res.redirect("/");
+    res.status(201).json({ message: "created" });
   } catch (error) {
     console.error("eror submit:", error);
   }
