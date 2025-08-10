@@ -1,30 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <form action="/submit" method="post">
-        <header>
-            <h1>welcome</h1>
-        </header>
-        <section id="newcomplaint">
-            <h3 class="txtnew">new complaint</h3>
-            <div class="form-group">
-            <label for="category">category</label>
-            <select id="category" name="category" required="">
-              <option value="">select category</option>
-              <option value="food">food</option>
-              <option value="equipment">equipment</option>
-              <option value="orders">orders</option>
-              <option value="other">other</option>
-            </select>
-          </div>
-        </section>
+      <header>
+        <h1>New complaint</h1>
+      </header>
+      <section id="newcomplaint" class="blokFrame">
+        <h3 class="txtnew">Enter the complaint.</h3>
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select id="category" name="category" required>
+            <option value="other">Other</option>
+            <option value="food">Food</option>
+            <option value="equipment">Equipment</option>
+            <option value="orders">Orders</option>
+          </select>
+
+          <label for="message">Complaint</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Enter your complaint..."
+            rows="5"
+            required
+          ></textarea>
+         
+
+          <button type="submit" class="btn btn-primary">Send</button>
+        </div>
+      </section>
     </form>
-</body>
+  </body>
 </html>

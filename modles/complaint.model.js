@@ -6,7 +6,7 @@ export async function createComplaint(complaintData) {
   const complaint = {
     category: complaintData.category,
     message: complaintData.message,
-    createdAt: new Date(),
+    createdAt: new Date().toLocaleString('sv-SE',{timeZone:'Asia/Jerusalem',hour12:false}).replace('T',' ')
   };
   return await collection.insertOne(complaint);
 }
