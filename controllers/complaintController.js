@@ -7,9 +7,10 @@ export async function submitComplaint(req, res) {
   try {
     const { category, message } = req.body;
     await createComplaint({ category, message });
-    res.status(201).json({ message: "created" });
+    res.send({ status: "send secefuly", data: { category, message } });
   } catch (error) {
     console.error("eror submit:", error);
+    res.send({ status: "not submit" });
   }
 }
 
