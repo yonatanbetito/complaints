@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a href="/" style="display: inline-block; margin: 1rem; color: white"
+      >Back to home</a
+    >
+    <div class="admin-section">
+      <form action="/admin-login" method="post">
+        <div class="blokFrame">
+          <h3 class="txtnew">Admin login</h3>
+          <div class="form-group">
+            <label for="password" id="passwordText">password</label>
+            <input type="password" id="password" name="password" required />
+            <button type="submit">login...</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

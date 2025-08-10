@@ -6,6 +6,9 @@ import {
 
 const router = express.Router();
 
+router.get("/", (req, res) => {
+  res.sendFile("index.html", { root: "./Public" });
+});
 router.post("/submit", submitComplaint);
 router.post("/admin-login", checkAdmin);
 

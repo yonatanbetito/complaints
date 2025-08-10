@@ -1,9 +1,50 @@
+/* עיצוב דף ראשי */
+
+.homepage {
+  text-align: center;
+  padding: 2rem;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 30rem;
+  margin: 2rem auto;
+}
+
+.option-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.2s;
+}
+
+.option-card h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  color: #6477ca;
+}
+
+.option-card p {
+  margin: 0;
+  font-size: 1rem;
+  color: #666;
+}
+
+/* עיצוב דף המשובים */
 
 body {
-    min-height: 100vh;
-    color: rgb(51, 51, 51);
-    line-height: 1.6;
-    background: linear-gradient(135deg, rgb(102, 126, 234) 0%, rgb(118, 75, 162) 100%);
+  min-height: 100vh;
+  color: rgb(51, 51, 51);
+  line-height: 1.6;
+  background: linear-gradient(
+    135deg,
+    rgb(102, 126, 234) 0%,
+    rgb(118, 75, 162) 100%
+  );
 }
 
 h1 {
@@ -33,6 +74,9 @@ h1 {
 
 .form-group {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .form-group label {
@@ -71,3 +115,27 @@ button {
   font-size: 1.1rem;
 }
 
+/* עיצוב דף מנהל */
+.admin-section {
+  max-width: 25rem;
+  margin: 2rem auto;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+#passwordText {
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#password {
+  margin: 25px;
+  margin-top: 0px;
+}

@@ -29,7 +29,7 @@ export async function checkAdmin(req, res) {
   if (password === process.env.ADMIN_PASSWORD) {
     try {
       const complaints = await getAllComplaints();
-      res.json({ success: true, complaints });
+      res.send({ status: "login successful", complaints: complaints });
     } catch (error) {
       res.status(500).json({ success: false, message: "eror get complaint" });
     }
